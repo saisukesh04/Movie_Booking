@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    <form action="/" method="POST" class="form-login">
+        <h1 style="font-size: 40px;">Login</h1>
+        <input type="email" name="email" class="form-input" placeholder="Email address" autocomplete="off"
+            id="login-email" />
+        <input type="password" name="password" class="form-input" placeholder="Password" autocomplete="off"
+            id="login-password" />
+
+        <button class="btn-submit" id="btn-login">Log in</button>
+        <p>Not a member? <a href="#" id="tosignup">Sign up</a></p>
+    </form>
+    
+    <div class="circle-lg"></div>
+    <div class="circle-sm"></div>
+    <div class="circle-md"></div>
+    <div class="circle-sm-bordered"></div>
+    <div class="rectangle-lg"></div>
+    <div class="rectangle-sm"></div>
 </body>
+
 </html>
