@@ -1,169 +1,181 @@
 html, body {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    font-family: 'Montserrat', sans-serif;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form-login {
-    width: fit-content;
-    margin: auto auto;
-    padding: 15px 30px 20px 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    background-color: rgb(250, 250, 250);
-    border-radius: 10px;
+  width: fit-content;
+  margin: auto auto;
+  padding: 15px 30px 20px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
 }
 
-input {
-    width: 250px;
-    height: 35px;
-    margin: 10px;
-    font-size: medium;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: none;
-    border-radius: 5px;
-    padding: 5px 0px 3px 12px;
+input, select {
+  width: 250px;
+  height: 35px;
+  margin: 10px;
+  font-size: medium;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 0px 3px 12px;
 }
 
 .btn-submit {
-    padding: 10px;
-    font-size: 20px;
-    font-family: inherit;
-    margin: 1rem 0px;
-    outline: none;
-    border: none;
-    background-color: #5e60ce;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  font-family: inherit;
+  margin: 1rem 0px;
+  outline: none;
+  border: none;
+  background-color: #5e60ce;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+select {
+  width: 262px !important;
+  height: 43px !important;
+  padding-left: 8px !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .circle-lg {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50rem;
-    background-color: #fa2c7e;
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    animation: custom-animation2 7s 1s infinite ease-in-out;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50rem;
+  background-color: #fa2c7e;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  animation: custom-animation2 7s 1s infinite ease-in-out;
 }
 
 .circle-md {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50rem;
-    background-color: #54d2e0;
-    position: absolute;
-    top: 80%;
-    right: 15%;
-    animation: custom-animation1 6s infinite ease-in-out;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50rem;
+  background-color: #54d2e0;
+  position: absolute;
+  top: 80%;
+  right: 15%;
+  animation: custom-animation1 6s infinite ease-in-out;
 }
 
 .circle-sm, .circle-sm-bordered {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50rem;
-    background-color: #6dd8bb;
-    position: absolute;
-    top: 10%;
-    right: 15%;
-    animation: custom-animation3 7s 1s infinite ease-in-out;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50rem;
+  background-color: #6dd8bb;
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  animation: custom-animation3 7s 1s infinite ease-in-out;
 }
 
 .circle-sm-bordered {
-    background-color: #ffffff;
-    border: 15px solid #6dd8bb;
-    position: absolute;
-    top: 70%;
-    left: 10%;
-    animation: custom-animation4 8s infinite ease-in-out;
+  background-color: #ffffff;
+  border: 15px solid #6dd8bb;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  animation: custom-animation4 8s infinite ease-in-out;
 }
 
 .rectangle-lg {
-    width: 35rem;
-    height: 2rem;
-    background-color: #4ea8de;
-    transform: rotate(135deg);
-    position: absolute;
-    top: 60%;
-    left: -15%;
-    animation: custom-animation5 8s infinite ease-in-out;
+  width: 35rem;
+  height: 2rem;
+  background-color: #4ea8de;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 60%;
+  left: -15%;
+  animation: custom-animation5 8s infinite ease-in-out;
 }
 
 .rectangle-sm {
-    width: 25rem;
-    height: 1.5rem;
-    background-color: #5e60ce;
-    transform: rotate(135deg);
-    position: absolute;
-    top: 50%;
-    right: -5%;
-    animation: custom-animation6 8s infinite ease-in-out;
+  width: 25rem;
+  height: 1.5rem;
+  background-color: #5e60ce;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  animation: custom-animation6 8s infinite ease-in-out;
 }
 
 @keyframes custom-animation1 {
-    50% {
-      top: 75%;
-      right: 10%;
-    }
-    100% {
-      top: 80%;
-      right: 15%;
-    }
+  50% {
+    top: 75%;
+    right: 10%;
   }
-  @keyframes custom-animation2 {
-    50% {
-      top: 10%;
-      left: 15%;
-    }
-    100% {
-      top: 15%;
-      left: 10%;
-    }
+  100% {
+    top: 80%;
+    right: 15%;
   }
-  @keyframes custom-animation3 {
-    50% {
-      top: 15%;
-      right: 10%;
-    }
-    100% {
-      top: 10%;
-      right: 15%;
-    }
+}
+
+@keyframes custom-animation2 {
+  50% {
+    top: 10%;
+    left: 15%;
   }
-  @keyframes custom-animation4 {
-    50% {
-      top: 75%;
-      left: 15%;
-    }
-    100% {
-      top: 70%;
-      left: 10%;
-    }
+  100% {
+    top: 15%;
+    left: 10%;
   }
-  @keyframes custom-animation5 {
-    50% {
-      top: 60%;
-      left: -17%;
-    }
-    100% {
-      top: 60%;
-      left: -15%;
-    }
+}
+
+@keyframes custom-animation3 {
+  50% {
+    top: 15%;
+    right: 10%;
   }
-  @keyframes custom-animation6 {
-    50% {
-      top: 40%;
-      right: -10%;
-    }
-    100% {
-      top: 50%;
-      right: -5%;
-    }
+  100% {
+    top: 10%;
+    right: 15%;
   }
+}
+
+@keyframes custom-animation4 {
+  50% {
+    top: 75%;
+    left: 15%;
+  }
+  100% {
+    top: 70%;
+    left: 10%;
+  }
+}
+
+@keyframes custom-animation5 {
+  50% {
+    top: 60%;
+    left: -17%;
+  }
+  100% {
+    top: 60%;
+    left: -15%;
+  }
+}
+
+@keyframes custom-animation6 {
+  50% {
+    top: 40%;
+    right: -10%;
+  }
+  100% {
+    top: 50%;
+    right: -5%;
+  }
+}
