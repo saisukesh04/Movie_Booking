@@ -1,30 +1,33 @@
 const searchNav = $('#nav_search');
-$('.popup').hide();
+const movieNav = $('#nav_movies');
+const popUp = $('.popup');
+
+popUp.hide();
 
 $(document).ready(function () {
     $('.profile').hover(
         (e) => {
             e.preventDefault();
-            $('.popup').show();
+            popUp.show();
         },
         (e) => {
             e.preventDefault();
-            $('.popup').hide();
+            popUp.hide();
         }
     );
 
-    $('.popup').hover(
+    popUp.hover(
         (e) => {
             e.preventDefault();
-            $('.popup').show();
+            popUp.show();
         },
         (e) => {
             e.preventDefault();
-            $('.popup').hide();
+            popUp.hide();
         }
     );
 });
 
 searchNav.on('click', function(e){
-    
+    // searchSection.show();
 });
