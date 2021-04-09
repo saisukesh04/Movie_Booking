@@ -1,13 +1,13 @@
 .navbar {
-  width: 100px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  margin: 0;
-  background-color: #fff;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-links {
@@ -17,8 +17,7 @@
     padding: 0;
 }
 
-.nav-item,
-.profile{
+.nav-item, .profile {
     font-size: 25px;
     text-align: center;
     margin: 30px 0;
@@ -29,10 +28,39 @@
     color: #5e60ce;
 }
 
-.nav-identifier,
-.profile-identifier {
+.nav-identifier, .profile-identifier {
     font-size: 14px;
     font-weight: bold;
 }
 
+.popup {
+    position: absolute;
+    left: 95px;
+    bottom: 3rem;
+    width: 200px;
+    height: 85px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    z-index: 2000 !important;
+}
 
+.popup a {
+    text-decoration: none;
+    color: #000;
+}
+
+.popup-item {
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #e6ecf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    cursor: pointer;
+}
+
+.popup-item:hover {
+    background-color: #cae1f1;
+}
