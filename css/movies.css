@@ -11,7 +11,6 @@ html, body {
     margin-left: 150px;
     margin-right: 50px;
     grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 .movie_card {
