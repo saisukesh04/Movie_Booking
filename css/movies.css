@@ -23,6 +23,7 @@ html, body {
     padding: 15px 15px 5px;
     margin: 20px;
     border-radius: 8px;
+    width: 230px;
 }
 
 .movie_card:hover{
@@ -32,6 +33,11 @@ html, body {
 
 .mov_name{
     padding-top: 10px;
+    overflow-wrap: break-word;
+}
+
+.mov_year{
+  color: #919aa3;
 }
 
 .cards-buffer img{
