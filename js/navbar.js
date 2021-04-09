@@ -1,3 +1,4 @@
+const searchNav = $('#nav_search');
 $('.popup').hide();
 
 $(document).ready(function () {
@@ -22,4 +23,8 @@ $(document).ready(function () {
             $('.popup').hide();
         }
     );
+});
+
+searchNav.on('click', function(e){
+    
 });
