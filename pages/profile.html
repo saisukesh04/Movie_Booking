@@ -4,14 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&amp;display=swap"
+    rel="stylesheet">
   <link href="../css/profile.css" rel="stylesheet">
+  <link href="../css/navbar.css" rel="stylesheet">
   <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
-  <link href='https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css'
+    rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/1da72926fa.js" crossorigin="anonymous"></script>
 </head>
 
-<body class='snippet-body'>
-  <div class="page-content page-container" id="page-content">
+<body>
+  <nav class="navbar">
+    <ul class="navbar-links">
+      <li class="nav-item" id="nav_search">
+        <a href="../index.html" class="nav-link"><i class="fas fa-search"></i></a>
+        <p class="nav-identifier">Search</p>
+      </li>
+      <li class="nav-item" id="nav_movies">
+        <a href="../pages/movies.html" class="nav-link"><i class="fas fa-film"></i></a>
+        <p class="nav-identifier">Movies</p>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link"><i class="fas fa-passport"></i></a>
+        <p class="nav-identifier">Booking<br>History</p>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link"><i class="fas fa-rupee-sign"></i></a>
+        <p class="nav-identifier">Payments</p>
+      </li>
+      <li class="nav-item">
+        <a href="../pages/faq.html" class="nav-link"><i class="fas fa-question-circle"></i></a>
+        <p class="nav-identifier">FAQs</p>
+      </li>
+    </ul>
+
+    <div class="profile">
+      <a href="#" class="profile-link"><i class="fas fa-user-circle"></i></a>
+      <p class="profile-identifier">Profile</p>
+    </div>
+    <div class="popup">
+      <a class="popup-item" href="../pages/profile.html">View Profile</a>
+      <a class="popup-item logout" href="../pages/login.html">Logout</a>
+    </div>
+  </nav>
+
+  <section>
     <div class="padding">
       <div class="row container d-flex justify-content-center">
         <div class="col-xl-6 col-md-12">
@@ -19,7 +57,8 @@
             <div class="row m-l-0 m-r-0">
               <div class="col-sm-4 bg-c-lite-green user-profile">
                 <div class="card-block text-center text-white">
-                  <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                  <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius"
+                      alt="User-Profile-Image"> </div>
                   <h6 class="f-w-600">Aaryan Kothari</h6>
                   <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                 </div>
@@ -65,7 +104,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script src="../js/navbar.js"></script>
 </body>
 
 </html>

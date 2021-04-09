@@ -4,17 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/movies.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1da72926fa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="movie_card">
-        <img class="mov_poster" src="https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg" 
-            width="" height="300px">
-        <p class="">Movie name</p>
-    </div>
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li class="nav-item" id="nav_search">
+                <a href="../index.html" class="nav-link"><i class="fas fa-search"></i></a>
+                <p class="nav-identifier">Search</p>
+            </li>
+            <li class="nav-item" id="nav_movies">
+                <a href="../pages/movies.html" class="nav-link"><i class="fas fa-film"></i></a>
+                <p class="nav-identifier">Movies</p>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fas fa-passport"></i></a>
+                <p class="nav-identifier">Booking<br>History</p>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fas fa-rupee-sign"></i></a>
+                <p class="nav-identifier">Payments</p>
+            </li>
+            <li class="nav-item">
+                <a href="../pages/faq.html" class="nav-link"><i class="fas fa-question-circle"></i></a>
+                <p class="nav-identifier">FAQs</p>
+            </li>
+        </ul>
+
+        <div class="profile">
+            <a href="#" class="profile-link"><i class="fas fa-user-circle"></i></a>
+            <p class="profile-identifier">Profile</p>
+        </div>
+        <div class="popup">
+            <a class="popup-item" href="../pages/profile.html">View Profile</a>
+            <a class="popup-item logout" href="../pages/login.html">Logout</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="movie_card">
+            <img class="mov_poster" src="https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg" width=""
+                height="300px">
+            <p class="">Movie name</p>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>
