@@ -8,6 +8,7 @@
     background-color: #fff;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-links {
@@ -36,7 +37,7 @@
 .popup {
     position: absolute;
     left: 95px;
-    bottom: 3rem;
+    bottom: 40px;
     width: 200px;
     height: 85px;
     background-color: #fff;
