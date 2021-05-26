@@ -9,21 +9,22 @@ const searchStrRes = $('.search_text_results');
 const moviesBlock = $('.card_buffer');
 
 function createMovieCard(movies) {
-    const movieCard = document.createElement('div');
-    movieCard.setAttribute('class', 'movie_buffer');
+    let output = ``;
 
-    const movieTemplate = `
-        ${movies.map((movie) => {
-            return `
-                <div class="movie_card">
-                    <img src=${image_url + movie.poster_path} data-movie-id=${movie.id} width=""
-                    height="300px">
-                    <p class="mov_name">${movie.title}</p>
-                </div>`;
-        })}`;
+    movies.forEach(movie => {
+        let image = "./../assets/default_movie.jpeg";
+        if (movie.poster_path != null)
+            image = image_url + movie.poster_path;
+        output += `
+        <div class="movie_card">
+            <img src=${image} data-movie-id=${movie.id} width=""
+                height="300px">
+            <p class="mov_name">${movie.title}</p>
+        </div>`;
+    });
 
-    movieCard.innerHTML = movieTemplate;
-    return movieCard;
+    moviesBlock.empty();
+    moviesBlock.html(output);
 }
 
 searchBtn.on('click', function (e) {
@@ -40,8 +41,7 @@ searchBtn.on('click', function (e) {
             .then((res) => res.json())
             .then((data) => {
                 const movies = data.results;
-                const movBlock = createMovieCard(movies);
-                moviesBlock.append(movBlock);
+                createMovieCard(movies);
                 console.log('Movies: ', movies);
             })
             .catch((error) => {
@@ -51,6 +51,9 @@ searchBtn.on('click', function (e) {
 });
 
 searchBtnRes.on('click', function (e) {
+    e.preventDefault();
+    moviesBlock.empty();
+    
     if (searchStrRes.val() != "") {
         console.log("Movie Search: " + searchStrRes.val());
         $('.search_res_text').text("Showing results for : " + searchStrRes.val());
@@ -58,7 +61,9 @@ searchBtnRes.on('click', function (e) {
         fetch(url + searchStrRes.val())
             .then((res) => res.json())
             .then((data) => {
-                console.log('Data: ', data);
+                const movies = data.results;
+                createMovieCard(movies);
+                console.log('Movies: ', movies);
             })
             .catch((error) => {
                 console.log('Error: ', error);

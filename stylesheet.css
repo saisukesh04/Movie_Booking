@@ -70,6 +70,13 @@
     cursor: pointer;
 }
 
+.search_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #bg_image_movie {
     position: absolute;
     top: 20px;
@@ -89,7 +96,7 @@
 .search_results {
     padding-top: 50px;
     padding-left: 150px;
-    padding-right: 150px;
+    padding-right: 50px;
     padding-bottom: 10px;
 }
 
@@ -119,6 +126,17 @@
 .search_res_text {
     font-size: 18px;
     font-weight: bold;
+}
+
+.search_form_2 {
+    width: 100%;
+}
+
+.card_buffer {
+    display: grid;
+    width: 100%;
+    margin-right: 50px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .movie_card {
