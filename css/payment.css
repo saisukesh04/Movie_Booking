@@ -17,7 +17,7 @@ html, body {
     width: fit-content;
     display: flex;
     padding: 20px 150px 20px 30px;
-    margin: 20px;
+    margin: 20px 0px 20px 40px;
     border-radius: 8px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     flex-direction: column;
