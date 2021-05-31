@@ -45,7 +45,7 @@ loginBtn.on('click', function (e) {
         alert("Invalid credentials");
       } else {
         console.log(result);
-        window.location.replace('../index.html');
+        window.location.replace('../pages/main.html');
         sessionStorage.setItem("email", emailId);
       }
     }).catch((err) => {
@@ -87,7 +87,7 @@ signUpBtn.on('click', function (e) {
           console.log("Invalid Creds");
         else {
           console.log(result);
-          window.location.replace('../index.html');
+          window.location.replace('../pages/main.html');
           sessionStorage.setItem("email", emailId);
         }
       }).catch((err) => {

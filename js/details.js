@@ -63,10 +63,10 @@ bookBtn.on("click", function (e) {
                 console.log("Invalid Creds");
             else {
                 console.log(result);
-                window.location.replace('../index.html');
+                window.location.replace('../pages/main.html');
             }
         }).catch((err) => {
-            window.location.replace('../index.html');
+            window.location.replace('../pages/main.html');
             console.log(err.message());
         });
 });

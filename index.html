@@ -1,81 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&amp;display=swap"
         rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1da72926fa.js" crossorigin="anonymous"></script>
-    <title>Movie Booking</title>
+    <link href="./css/login.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul class="navbar-links">
-            <li class="nav-item" id="nav_search">
-                <a href="#" class="nav-link"><i class="fas fa-search"></i></a>
-                <p class="nav-identifier">Search</p>
-            </li>
-            <li class="nav-item" id="nav_movies">
-                <a href="./pages/movies.html" class="nav-link"><i class="fas fa-film"></i></a>
-                <p class="nav-identifier">Movies</p>
-            </li>
-            <li class="nav-item">
-                <a href="./pages/booking.html" class="nav-link"><i class="fas fa-passport"></i></a>
-                <p class="nav-identifier">Booking<br>History</p>
-            </li>
-            <li class="nav-item">
-                <a href="./pages/payment.html" class="nav-link"><i class="fas fa-rupee-sign"></i></a>
-                <p class="nav-identifier">Payments</p>
-            </li>
-            <li class="nav-item">
-                <a href="./pages/faq.html" class="nav-link"><i class="fas fa-question-circle"></i></a>
-                <p class="nav-identifier">FAQs</p>
-            </li>
-        </ul>
+    <form action="/" method="POST" id="login-form" class="form-login">
+        <h1 style="font-size: 40px;">Login</h1>
+        <input type="email" name="email" class="form-input" placeholder="Email address" autocomplete="off"
+            id="login-email" />
+        <input type="password" name="password" class="form-input" placeholder="Password" autocomplete="off"
+            id="login-password" />
 
-        <div class="profile">
-            <a href="#" class="profile-link"><i class="fas fa-user-circle"></i></a>
-            <p class="profile-identifier">Profile</p>
+        <button class="btn-submit" id="btn-login">Log in</button>
+        <p>Not a member? <a href="#" id="tosignup">Sign up</a></p>
+    </form>
+
+    <div class="circle-lg"></div>
+    <div class="circle-sm"></div>
+    <div class="circle-md"></div>
+    <div class="circle-sm-bordered"></div>
+    <div class="rectangle-lg"></div>
+    <div class="rectangle-sm"></div>
+
+    <form action="/" method="POST" id="signup-form" class="form-login">
+        <h1 style="font-size: 40px;">Sign Up</h1>
+        <div class="group-inputs">
+            <input type="text" name="fname" class="form-input fname" placeholder="First Name" autocomplete="off"
+                id="fname" />
+            <input type="text" name="lname" class="form-input lname" placeholder="Last Name" autocomplete="off"
+                id="lname" />
         </div>
-        <div class="popup">
-            <a class="popup-item" href="./pages/profile.html">View Profile</a>
-            <a class="popup-item logout" href="./pages/login.html">Logout</a>
+        <div class="group-inputs">
+            <input type="date" name="dob" class="form-input" id="input-date" placeholder="Date of birth" />
+            <select name="gender" id="gender">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="o">Other</option>
+            </select>
         </div>
-    </nav>
-
-    <section class="main">
-        <img src="./assets/movie_night.svg" alt="Movie Image" id="bg_image_movie" height="200px" width="250px">
-        <img src="./assets/netflix.svg" alt="Netflix Image" id="bg_image_netflix" height="300px" width="300px">
-        <div class="search_container">
-            <div class="circle"><i class="fas fa-search"></i></div>
-            <h1>Movie Search</h1>
-            <form class="search_form">
-                <input type="text" class="search_text" placeholder="Search...">
-                <button type="submit" id="search-btn" class="search_btn">Search</button>
-            </form>
+        <div class="group-inputs">
+            <input type="email" name="email" class="form-input" placeholder="Email address" autocomplete="off"
+                id="email" />
+            <input type="tel" name="phone" class="form-input" placeholder="Phone" autocomplete="off" pattern="[0-9]{10}"
+                id="phone" />
         </div>
-    </section>
-
-    <section class="search_results hidden">
-        <div class="search_buffer">
-            <form class="search_form_2">
-                <input type="text" name="search" class="search_text_results" placeholder="Search...">
-                <button class="search_btn">Search</button>
-            </form>
+        <div class="group-inputs">
+            <input type="password" name="password" class="form-input" placeholder="Password" autocomplete="off"
+                id="password" />
+            <input type="password" name="confirmpassword" class="form-input" placeholder="Confirm password"
+                autocomplete="off" id="confirm-password" />
         </div>
-        <p class="search_res_text">Furious</p>
-
-        <div class="card_buffer"></div>
-    </section>
-
+        <div class="serror"></div>
+        <button class="btn-submit" id="btn-register">Sign up</button>
+        <p>Already a member? <a href="#" id="tologin">Log in</a></p>
+    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
-    <script src="./js/navbar.js"></script>
-    <script src="./js/search.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
