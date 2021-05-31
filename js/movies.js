@@ -10,7 +10,7 @@ function createMovieCard(movies) {
         if (movie.poster_path != null)
             image = image_url + movie.poster_path;
         output += `
-        <div class="movie_card">
+        <div class="movie_card" id=${movie.id}>
             <img src=${image} data-movie-id=${movie.id} width=""
                 height="300px">
             <p class="mov_name">${movie.title}</p>
@@ -35,4 +35,11 @@ $(document).ready(function () {
             .catch((error) => {
                 console.log('Error: ', error);
             });
+});
+
+$("body").on('click', ".movie_card", function (e) {
+    e.preventDefault();
+    var clicked = e.target.id || "No ID!";
+    console.log("Movie clicked: " + clicked);
+    window.location.replace('./../pages/movie_detail.html');
 });
