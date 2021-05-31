@@ -37,7 +37,7 @@ loginBtn.on('click', function (e) {
     body: strJson
   }
 
-  fetch("http://localhost:3000/login", requestOptions)
+  fetch("https://moviebooking-ipw.herokuapp.com/login", requestOptions)
     .then(response => response.json())
     .then((result) => {
       if (result.status == "failure"){
@@ -79,7 +79,7 @@ signUpBtn.on('click', function (e) {
       body: strJson
     }
 
-    fetch("http://localhost:3000/signup", requestOptions)
+    fetch("https://moviebooking-ipw.herokuapp.com/signup", requestOptions)
       .then(response => response.json())
       .then((result) => {
         console.log(result);

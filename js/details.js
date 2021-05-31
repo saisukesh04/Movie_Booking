@@ -55,7 +55,7 @@ bookBtn.on("click", function (e) {
         body: strJson
     }
 
-    fetch("http://localhost:3000/book", requestOptions)
+    fetch("https://moviebooking-ipw.herokuapp.com/book", requestOptions)
         .then(response => response.json())
         .then((result) => {
             console.log(result);
