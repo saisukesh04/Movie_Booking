@@ -13,6 +13,31 @@ section {
     padding-bottom: 10px;
 }
 
+.details_card {
+    display: flex;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px 15px 5px;
+    border-radius: 10px;
+}
+
+#book_movie {
+    width: 60%;
+    margin-left: 340px;
+    margin-top: 70px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    background-color: #5e60ce;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .details_div {
     margin-left: 30px;
 }
@@ -24,21 +49,34 @@ section {
     font-weight: bold;
 }
 
+.movie_poster {
+    border-radius: 15px;
+    margin: 20px;
+}
+
 .release_date {
     margin-top: 0;
 }
 
 .overview {
-    margin-top: 40px;
+    margin-top: 50px;
+    font-size: 18px;
 }
 
-.ratings_div{
-    margin-top: 10px;
+.ratings_div {
+    margin-top: 50px;
     display: flex;
 }
-.rating{
-    margin: 0 0 0 15px;
+
+span {
+    margin: auto 2px;
 }
+
+.rating {
+    margin: 0 0 0 15px;
+    font-size: 30px;
+}
+
 .checked {
     color: orange;
-  }
+}

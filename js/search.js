@@ -73,7 +73,8 @@ searchBtnRes.on('click', function (e) {
 
 $("body").on('click', ".movie_card", function (e) {
     e.preventDefault();
-    var clicked = e.target.id || "No ID!";
+    var clicked = this.id;
+    sessionStorage.setItem("MovieClicked", clicked);
     console.log("Movie clicked: " + clicked);
     window.location.replace('./../pages/movie_detail.html');
 });

@@ -23,23 +23,22 @@ function createMovieCard(movies) {
 }
 
 $(document).ready(function () {
-    console.log("Hello Movies");
-
     fetch(url)
-            .then((res) => res.json())
-            .then((data) => {
-                const movies = data.results;
-                createMovieCard(movies);
-                console.log('Movies: ', movies);
-            })
-            .catch((error) => {
-                console.log('Error: ', error);
-            });
+        .then((res) => res.json())
+        .then((data) => {
+            const movies = data.results;
+            createMovieCard(movies);
+            console.log('Movies: ', movies);
+        })
+        .catch((error) => {
+            console.log('Error: ', error);
+        });
 });
 
 $("body").on('click', ".movie_card", function (e) {
     e.preventDefault();
-    var clicked = e.target.id || "No ID!";
+    var clicked = this.id;
+    sessionStorage.setItem("MovieClicked", clicked);
     console.log("Movie clicked: " + clicked);
     window.location.replace('./../pages/movie_detail.html');
 });
