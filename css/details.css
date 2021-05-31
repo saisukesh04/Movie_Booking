@@ -80,3 +80,24 @@ span {
 .checked {
     color: orange;
 }
+
+.input_div {
+    display: flex;
+    margin-top: 35px;
+}
+
+.seat {
+    font-size: 20px;
+    margin: auto 0;
+    margin-right: 25px;
+}
+
+.seat_nos {
+    width: 250px;
+    height: 35px;
+    font-size: medium;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0px 3px 12px;
+}

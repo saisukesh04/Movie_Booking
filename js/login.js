@@ -24,8 +24,9 @@ loginBtn.on('click', function (e) {
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
+  let emailId = $('#login-email').val();
   let body = {
-    email: $('#login-email').val(),
+    email: emailId,
     password: $('#login-password').val()
   };
 
@@ -39,12 +40,13 @@ loginBtn.on('click', function (e) {
   fetch("http://localhost:3000/login", requestOptions)
     .then(response => response.json())
     .then((result) => {
-      if (result.status == "failure")
+      if (result.status == "failure"){
         console.log("Invalid Creds");
-      else {
+        alert("Invalid credentials");
+      } else {
         console.log(result);
         window.location.replace('../index.html');
-        console.log("Hello");
+        sessionStorage.setItem("email", emailId);
       }
     }).catch((err) => {
       console.log(err);
@@ -54,6 +56,7 @@ loginBtn.on('click', function (e) {
 signUpBtn.on('click', function (e) {
   e.preventDefault();
 
+  let emailId = $("#email").val();
   let pass = $("#password").val();
   let confPass = $("#confirm-password").val();
   let myName = $('#fname').val() + " " + $('#lname').val();
@@ -65,7 +68,7 @@ signUpBtn.on('click', function (e) {
 
     let body = {
       name: myName,
-      email: $("#email").val(),
+      email: emailId,
       password: pass
     };
 
@@ -85,7 +88,7 @@ signUpBtn.on('click', function (e) {
         else {
           console.log(result);
           window.location.replace('../index.html');
-          console.log("Hello");
+          sessionStorage.setItem("email", emailId);
         }
       }).catch((err) => {
         console.log(err);

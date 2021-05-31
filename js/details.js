@@ -37,4 +37,36 @@ $(document).ready(function () {
 
 bookBtn.on("click", function (e) {
     e.preventDefault();
+    const seats = $(".seat_nos").val();
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let body = {
+        email: sessionStorage.getItem("email"),
+        movieName: title.text(),
+        seatNo: $('.seat_nos').val(),
+        address: "Bangalore"
+    };
+
+    let strJson = JSON.stringify(body);
+    let requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: strJson
+    }
+
+    fetch("http://localhost:3000/book", requestOptions)
+        .then(response => response.json())
+        .then((result) => {
+            console.log(result);
+            if (result.status == "failure")
+                console.log("Invalid Creds");
+            else {
+                console.log(result);
+                window.location.replace('../index.html');
+            }
+        }).catch((err) => {
+            window.location.replace('../index.html');
+            console.log(err.message());
+        });
 });

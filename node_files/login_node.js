@@ -5,6 +5,7 @@ const http = require('http');
 const app = express();
 const userSchem = require("./models/userModel");
 const User = require('./models/userModel');
+const { time } = require('console');
 
 app.use(require('cors')());
 
@@ -59,6 +60,25 @@ app.post('/signup', async (req, res) => {
             status: 'failure',
             error: e.message || e,
         });
+    }
+});
+
+app.post('/book', async (req, res) => {
+    try {
+
+        let movie = {
+            movieName : req.body.movieName,
+            date : new Date().toISOString(),
+            seatNo : req.body.seatNo,
+            address : req.body.address
+        }
+        await User.findOneAndUpdate(
+            { email: req.body.email },
+            { $push: { bookings: movie } }
+        );
+        res.status(200).send(req.user);
+    } catch (e) {
+        res.status(400).json({ message: e });
     }
 });
 
